@@ -5,7 +5,7 @@ import {Router, ActivatedRoute} from "@angular/router";
 @Component({
     selector: "route-modal",
     template: `
-<div class="modal route-modal" 
+<div class="modal route-modal"
      tabindex="-1"
      role="dialog"
      #modalRoot
@@ -67,7 +67,7 @@ export class RouteModal implements OnInit, OnDestroy {
     public submitButtonLabel: string;
 
     @Input()
-    public backdrop:boolen = true;
+    public backdrop:boolean = true;
 
     // -------------------------------------------------------------------------
     // Outputs
@@ -123,7 +123,7 @@ export class RouteModal implements OnInit, OnDestroy {
     open(...args: any[]) {
         if (this.isOpened)
             return;
-        
+
         this.isOpened = true;
         this.onOpen.emit(args);
         document.body.appendChild(this.backdropElement);

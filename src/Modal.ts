@@ -27,7 +27,7 @@ export class ModalFooter {
 @Component({
     selector: "modal",
     template: `
-<div class="modal" 
+<div class="modal"
      tabindex="-1"
      role="dialog"
      #modalRoot
@@ -83,7 +83,7 @@ export class Modal {
     public submitButtonLabel: string;
 
     @Input()
-    public backdrop:boolen = true;
+    public backdrop:boolean = true;
 
     // -------------------------------------------------------------------------
     // Outputs
@@ -138,7 +138,7 @@ export class Modal {
     open(...args: any[]) {
         if (this.isOpened)
             return;
-        
+
         this.isOpened = true;
         this.onOpen.emit(args);
         document.body.appendChild(this.backdropElement);
